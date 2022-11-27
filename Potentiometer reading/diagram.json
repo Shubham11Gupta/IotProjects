@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-ssd1306", "id": "oled1", "top": 274.8, "left": 53.13, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 296.61, "left": 294.92, "attrs": {} }
+  ],
+  "connections": [
+    [ "oled1:GND", "uno:GND.2", "black", [ "v-42.38", "h18.68", "v1.15" ] ],
+    [ "oled1:CLK", "uno:A5", "green", [ "v-47.48", "h156.72", "v-2.3" ] ],
+    [ "oled1:DATA", "uno:A4", "green", [ "v-56.69", "h157.66", "v-2.88" ] ],
+    [ "oled1:VIN", "uno:5V", "red", [ "v-70.51", "h14.87", "v-4.03" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v20.66", "h-89.74", "v-128.61", "h-50.69" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v28.22", "h-116.08", "v-122.56", "h-64.31", "v-6.81" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v15.36", "h-82.61", "v-130.88", "h-37.07", "v0.76" ] ]
+  ]
+}
