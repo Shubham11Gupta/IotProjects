@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "author": "SHUBHAM GUPTA",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0.67, "left": 214.01, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -54.9,
+      "left": 1.51,
+      "attrs": { "distance": "73" }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -73.63,
+      "left": 395.52,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -104.5,
+      "left": 323.47,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "ultrasonic1:GND", "esp:GND.2", "black", [ "v0" ] ],
+    [ "ultrasonic1:VCC", "esp:VIN", "red", [ "v0" ] ],
+    [ "ultrasonic1:TRIG", "esp:D25", "green", [ "v0" ] ],
+    [ "ultrasonic1:ECHO", "esp:D33", "green", [ "v0" ] ],
+    [ "pir1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "pir1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "pir1:OUT", "esp:D5", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "led1:A", "esp:D4", "green", [ "v0" ] ]
+  ]
+}
